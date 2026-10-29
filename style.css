@@ -32,3 +32,15 @@
 .rh-mag-section{margin:0 0 86px}.rh-mag-section h2{font-size:clamp(27px,4vw,42px);line-height:1.15;margin:10px 0 14px}.rh-mag-section-intro{max-width:740px;line-height:1.8;margin-bottom:28px}.rh-mag-feature{display:block;text-decoration:none;color:inherit;overflow:hidden;border:1px solid #d9e1e9}.rh-mag-feature img{display:block;width:100%;max-height:440px;object-fit:cover;object-position:top}.rh-mag-feature span{display:flex;justify-content:space-between;gap:16px;padding:16px 20px;font-size:12px}.rh-mag-feature strong{color:#013a63}
 .rh-mag-duo,.rh-mag-news{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.rh-mag-tile{display:block;color:inherit;text-decoration:none;min-width:0}.rh-mag-crop{height:300px;overflow:hidden;background:#f3f6f8;border:1px solid #e2e8ed}.rh-mag-crop img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .2s ease}.rh-mag-tile:hover img{transform:scale(1.025)}.rh-mag-type{display:block;margin-top:17px}.rh-mag-tile h3{font-size:19px;line-height:1.4;margin:7px 0}.rh-mag-tile p{font-size:13px;line-height:1.7;color:#4c5a67}.rh-mag-small{font-size:13px;margin-top:25px}.rh-mag-small a{color:#013a63}.rh-mag-news .rh-mag-lead{grid-column:1/-1}.rh-mag-news .rh-mag-lead .rh-mag-crop{height:410px}.rh-cover-link img{object-fit:contain;background:#0d3046}
 @media(max-width:650px){.rh-container{padding:22px 18px 60px}.rh-mag-photos,.rh-mag-duo,.rh-mag-news{grid-template-columns:1fr}.rh-mag-photos img{height:auto;max-height:360px;object-fit:contain}.rh-mag-news .rh-mag-lead{grid-column:auto}.rh-mag-crop,.rh-mag-news .rh-mag-lead .rh-mag-crop{height:280px}.rh-mag-section{margin-bottom:60px}.rh-mag-feature span{flex-direction:column}}
+
+/* Align Robin Hood photos and preserve full screenshot previews. */
+.rh-mag-photos{grid-template-columns:repeat(2,minmax(0,1fr));align-items:stretch}
+.rh-mag-photos figure{display:flex;flex-direction:column;min-width:0}
+.rh-mag-photos figure img{height:340px;object-fit:contain;object-position:center center;background:#f5f7f9}
+.rh-mag-photos .rh-mag-excerpt{grid-column:1/-1}
+.rh-mag-photos .rh-mag-excerpt img{height:300px;object-fit:contain;object-position:center top}
+.rh-mag-duo,.rh-mag-news{align-items:start}
+.rh-mag-crop,.rh-mag-news .rh-mag-lead .rh-mag-crop{height:340px}
+.rh-mag-crop img{object-fit:contain;object-position:center top;background:#f5f7f9}
+.rh-mag-feature img{max-height:none;height:auto;object-fit:contain}
+@media(max-width:650px){.rh-mag-photos{grid-template-columns:1fr}.rh-mag-photos .rh-mag-excerpt{grid-column:auto}.rh-mag-photos figure img,.rh-mag-photos .rh-mag-excerpt img{height:auto;max-height:420px}.rh-mag-crop,.rh-mag-news .rh-mag-lead .rh-mag-crop{height:300px}}
